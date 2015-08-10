@@ -2,9 +2,7 @@
 UI template for an e-commerce web application.
 
 
-To Dos:
-
-[+] Make the UI Responsive.
-
+To Dos:<br/>
+[+] Make the UI Responsive.<br/>
 [+] Clean up the code.
 
