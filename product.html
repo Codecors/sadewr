@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Startup</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-default custom-navbar">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="navbar-logo"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form custom-navbar-form" role="search">
+      <label for="search-query">
+      <i class="fa fa-search search-label"></i>
+    </label>
+        <div class="form-group search-bar" id="search">
+        
+          <input type="text" class="form-control" placeholder="What do you want to buy today?" id="search-query" style="border-radius:10px!important">
+        </div>
+      </form>
+      <a style="margin-top: 23px;" class="navbar-right btn btn-default" href="cart.html"><i class="fa fa-shopping-cart"></i>&nbsp;Cart</a>
+      <a class="btn facebook-mini-login navbar-right"  style="margin-top:23px" onclick="facebookLogin()"><i class="fa fa-facebook"></i></a>
+      <span class="navbar-right btn" style="margin-top:23px">Hi, <span class="username-placeholder">Guest</span></span>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="fake" style="height: 80px; width: 100%"></div>
+<div class="container-fluid" style="padding: 0px">
+
+	<div class="product-information">
+	<h2 class="product-header">Product Name</h2>
+		<div class="product-image">
+			<img src="images/thumb1.jpg" class="thumb">
+		</div>
+		<div class="product-specs-wrapper">
+			<div class="product-specs">
+				<div class="row">
+					<div class="col-md-6">Category1</div>
+					<div class="col-md-6">Spec1</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">Category2</div>
+					<div class="col-md-6">Spec2</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">Category3</div>
+					<div class="col-md-6">Spec3</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">Category4</div>
+					<div class="col-md-6">Spec4</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">Category5</div>
+					<div class="col-md-6">Spec5</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">Category6</div>
+					<div class="col-md-6">Spec6</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">Category7</div>
+					<div class="col-md-6">Spec7</div>
+				</div>
+			</div>
+			<div class="product-price">
+				<div class="row">
+					<div class="col-md-12">Rs.<span id="base-price">1000</span>x <input type="number" id="quantity" style="text-align: center; width: 50px; border: 1px solid #eee"  value="0"></div>
+				</div>
+			</div>
+			<div class="product-shop">
+				<div class="row">
+					<div class="col-md-6">Net Amount</div>
+					<div class="com-md-6">Rs. <span id="final-price">0</span></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="btn col-md-12"><button style="width: 200px; text-align: center" id="add-cart">Add to cart</button>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="product-reviews">
+		<div class="ratings"></div>
+		<div class="reviews"></div>
+	</div>
+	
+</div>
+<footer class="footer">
+		<div class="container-fluid" style="padding: 0px">
+			<div class="row">
+				<div class="col-md-4"><a href="#">Payment</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Gift Vouchers</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="#">Shipping</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Careers</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="#">Cancellation and Returns</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Contact Us</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="#">FAQ</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Press</a></div>
+			</div>
+			<div class="row social-bar">
+				<div class="col-md-3">
+					<span class="social"><i class="fa fa-facebook"></i></span>
+					<span class="social"><i class="fa fa-twitter"></i></span>
+					<span class="social"><i class="fa fa-google-plus"></i></span>
+				</div>
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<form class="form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Please enter your email to subscribe">
+					</div>
+					<button class="btn btn-default" style="color: #B2DF46; background-color: #1A1F23; border: none;">Subscribe Me</button>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">2015. &copy; Palash Chatterjee.</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		$("#quantity").change(function(){
+			var quantity = $("#quantity").val();
+			var baseprice =$("#base-price").text()
+			var finalprice =quantity*baseprice;
+			console.log("Quantity changed to "+quantity+" and price to "+finalprice);
+			$("#final-price").text(finalprice);
+		});
+
+		$("#add-cart").click(function(e){
+			e.preventDefault();
+			if(sessionStorage['loggedIn']==1){
+				window.location.href="cart.html";
+			}
+			else{
+				alert("Please login to add item to cart!");
+			}
+		});
+			<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      getData();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      console.log('Please log into this app.');
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      console.log('Please log into Facebook.');
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '931208936921065',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.2' // use version 2.2
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  
+  function getData() {
+    FB.api('/me', function(response) {
+      var $username = response.name;
+      // Set username in session storage
+      sessionStorage.setItem("username" ,$username);
+      console.log('Successful login for: ' + $username);
+
+      
+      //$("#status").text("Login successful!");
+    });
+  }
+
+  function prepareUI(){
+  	// Prepare UI for logged in user
+      $(".slide1-metro").css("display","none");
+
+    // Hide the mini login
+    $(".facebook-mini-login").css("visibility","hidden");
+    // Replace guest with username
+    if(sessionStorage['loggedIn']==1){
+    	$(".username-placeholder").text(sessionStorage['username']);
+    }
+  }
+
+    /*
+     * Using session storage to store login results.
+     * sessionStorage['loggedIn'] : 0 => Not Logged In
+     *                            : 1 => Logged In
+     *                            : 2 => App not authorised
+     */
+
+    function facebookLogin(){
+          FB.login(function(response){
+             if (response.status === 'connected') {
+                  getData();
+                  prepareUI();
+                  //$("#status").text("Login successful.");
+                  sessionStorage.setItem("loggedIn","1");
+             }else if (response.status === 'not_authorized') {
+                  $("#status").text("Please authorize our app to proceed");
+                  sessionStorage.setItem("loggedIn","2");
+            } else {
+                  $("#status").text("Please login to your facebook to continue shopping");
+                  sessionStorage.setItem("loggedIn","0");
+            }
+        });
+    }
+</script>
+	</script>
+	</body>
+	</html>

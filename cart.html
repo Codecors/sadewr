@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Startup</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $("body").css("display","none");
+        if(sessionStorage['loggedIn']==1){
+          var $username = sessionStorage['username'];
+          $(".username-placeholder").text($username)
+          $(".username-header").text($username);
+          $("body").css("display","block");
+        }
+        else{
+          window.location.href="index.html";
+        }
+      });
+  </script>
+</head>
+<body>
+
+  <nav class="navbar navbar-default custom-navbar">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="navbar-logo"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form custom-navbar-form" role="search">
+      <label for="search-query">
+      <i class="fa fa-search search-label"></i>
+    </label>
+        <div class="form-group search-bar" id="search">
+        
+          <input type="text" class="form-control" placeholder="What do you want to buy today?" id="search-query" style="border-radius:10px!important">
+        </div>
+      </form>
+      <a style="margin-top: 23px;" class="navbar-right btn btn-default" href="cart.html"><i class="fa fa-shopping-cart"></i>&nbsp;Cart</a>
+      <a class="btn facebook-mini-login navbar-right"  style="margin-top:23px" onclick="facebookLogin()"><i class="fa fa-facebook"></i></a>
+      <span class="navbar-right btn" style="margin-top:23px">Hi, <span class="username-placeholder">Guest</span></span>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="fake" style="height: 80px; width: 100%"></div>
+	<div class="container">
+		<div class="cart-owner">
+			<h3 class="username-header">Palash Chatterjee</h3>
+			<div class="edit-buyer-address-form" style="position:relative; display:none">
+				<textarea class="form-control" rows="3" style="max-width: 40%; display: inline-block"></textarea>
+				<button class="btn btn-default" id="save-address" style="position: absolute;top: 20%;margin-left: 10px;">Ship it here</button>
+			</div>
+			<div class="buyer-address-final">
+				<address style="display:inline-block">Please enter the shipping address</address>
+				<a class="btn btn-default btn-sm" id="edit-buyer-address" href="#" style="border-radius: 50%;margin-left: 20px;"><i class="fa fa-pencil"></i></a>
+			</div>
+		</div>
+		
+		<div class="cart-bill">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+					<th></th>
+					<th>Item</th>
+					<th>Unit Price</th>
+					<th>Quantity</th>
+					<th>Amount</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					<td><img src="images/thumb1.jpg" height="100px"></td>
+					<td>Product Name</td>
+					<td>Rs. 4500</td>
+					<td>1</td>
+					<td>Rs.4500</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="3"><strong>Total Amount</strong></td>
+						<td><strong>Rs.4500</strong></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+	<footer class="footer">
+		<div class="container-fluid" style="padding: 0px">
+			<div class="row">
+				<div class="col-md-4"><a href="#">Payment</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Gift Vouchers</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="#">Shipping</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Careers</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="#">Cancellation and Returns</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Contact Us</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="#">FAQ</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Press</a></div>
+			</div>
+			<div class="row social-bar">
+				<div class="col-md-3">
+					<span class="social"><i class="fa fa-facebook"></i></span>
+					<span class="social"><i class="fa fa-twitter"></i></span>
+					<span class="social"><i class="fa fa-google-plus"></i></span>
+				</div>
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<form class="form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Please enter your email to subscribe">
+					</div>
+					<button class="btn btn-default" style="color: #B2DF46; background-color: #1A1F23; border: none;">Subscribe Me</button>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">2015. &copy; Palash Chatterjee.</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		// Option to edit the address in cart.
+			$("#edit-buyer-address").click(function(e){
+				e.preventDefault();
+				console.log("Click");
+				var $address = $("address").text();
+				var $form = $(".edit-buyer-address-form");
+				$(".buyer-address-final").css("display","none");
+				$form.css("display","block");
+				$form.children("textarea").val($address);
+				console.log("Changing the address from "+$address);
+			});
+
+		// Put the edited address in the placeholder.
+			$("#save-address").click(function(e){
+				e.preventDefault();
+				var $form = $(".edit-buyer-address-form");
+				var $placeholder = $(".buyer-address-final");
+				var $address = $form.children("textarea").val();
+				$form.css("display","none");
+				$placeholder.children("address").text($address);
+				$placeholder.css("display", "block");
+				console.log("Address changed to "+$address);
+			});
+
+
+				
+		</script>
+</body>
+</html>

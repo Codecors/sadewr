@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Startup</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-default custom-navbar">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="navbar-logo"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form custom-navbar-form" role="search">
+      <label for="search-query">
+			<i class="fa fa-search search-label"></i>
+		</label>
+        <div class="form-group search-bar" id="search">
+        
+          <input type="text" class="form-control" placeholder="What do you want to buy today?" id="search-query" style="border-radius:10px!important">
+        </div>
+      </form>
+      <a style="margin-top: 23px;" class="navbar-right btn btn-default" href="cart.html"><i class="fa fa-shopping-cart"></i>&nbsp;Cart</a>
+      <a class="btn facebook-mini-login navbar-right"  style="margin-top:23px" onclick="facebookLogin()"><i class="fa fa-facebook"></i></a>
+      <span class="navbar-right btn" style="margin-top:23px">Hi, <span class="username-placeholder">Guest</span></span>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="fake" style="height: 80px; width: 100%"></div>
+
+	<div class="custom-container">
+		<div class="slide1">
+						<!--Carousel-->
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+	  </ol>
+
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner" role="listbox" style="height: 600px">
+	    <div class="item active">
+	     <!--<img src="images/main4.jpg" alt="Main 4" class="main-slider-image">-->
+	      <img src="images/thumb1.jpg" class="main-slider-image">
+	    </div>
+	    <div class="item">
+	      <!--<img src="images/main4.jpg" alt="Main 4" class="main-slider-image">-->
+	      <img src="images/thumb1.jpg" class="main-slider-image">
+	    </div>
+	    <div class="item">
+	      <!--<img src="images/main4.jpg" alt="Main 4" class="main-slider-image">-->
+	      <img src="images/thumb1.jpg" class="main-slider-image">
+	    </div>
+	    <div class="item">
+	      <!--<img src="images/main4.jpg" alt="Main 4" class="main-slider-image">-->
+	      <img src="images/thumb1.jpg" class="main-slider-image">
+	    </div>
+	    
+	  </div>
+	</div>
+			
+				<div>
+					<div id="user-login" class="slide1-metro"  style="border-top-left-radius: 50px;!important">
+						<div class="user-login-wrapper">
+							<h3>Login to Shop</h3>
+							<button class="btn btn-default facebook-login-button" onclick='facebookLogin();'><i class="fa fa-facebook "></i></button>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div id="guest-login" class="slide1-metro" style="border-bottom-right-radius: 50px;!important">
+						<div class="guest-login-wrapper">
+							<h3>Continue as guest</h3>
+							<button class="btn btn-default facebook-login-button" onclick='guestLogin()'><i class="fa fa-unlock-alt "></i></button>
+						</div>
+					</div>
+				</div>	
+		</div>
+
+		<div class="slide2">
+			<div class="container-fluid">
+			<div class="mini-slide">
+				<div class="slide-header"><h2>Header 1</h2><hr></div>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+				</div>
+			</div>
+			<div class="mini-slide">
+				<div class="slide-header"><h2>Header 2</h2><hr></div>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+				</div>
+			</div>
+			<div class="mini-slide">
+				<div class="slide-header"><h2>Header 3</h2><hr></div>
+				<div class="row">
+				<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+					<div class="col-md-3">
+						<img src="images/thumb1.jpg" class="thumb">
+						<span class="thumb-description">Item description here</span>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 20px;">
+				<div class="col-md-12"><a class="btn btn-default more-button" href="mart.html">View More Products</a></div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container-fluid" style="padding: 0px">
+			<div class="row">
+				<div class="col-md-4"><a href="#">Payment</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Gift Vouchers</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="#">Shipping</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Careers</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="#">Cancellation and Returns</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Contact Us</a></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="#">FAQ</a></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4"><a href="#">Press</a></div>
+			</div>
+			<div class="row social-bar">
+				<div class="col-md-3">
+					<span class="social"><i class="fa fa-facebook"></i></span>
+					<span class="social"><i class="fa fa-twitter"></i></span>
+					<span class="social"><i class="fa fa-google-plus"></i></span>
+				</div>
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<form class="form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Please enter your email to subscribe">
+					</div>
+					<button class="btn btn-default" style="color: #B2DF46; background-color: #1A1F23; border: none;">Subscribe Me</button>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">2015. &copy; Palash Chatterjee.</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		// Animate the item description
+		$(".col-md-3").hover(function(){
+			var $this = $(this);
+			$this.children("span").animate({opacity:1}, 1000);
+		}, function(){
+			$(this).children("span").animate({opacity:0}, 1000);;
+		});
+
+		// Animate the color of text in footer
+		$("footer .col-md-4").hover(function(){
+			var element = $(this).children("a")[0];
+			console.log(element);
+			$(this).children("a").css("color","white")
+		}, function(){
+			$(this).children("a").css("color","#828282");
+		});
+
+		// Function to login as guest user
+		guestLogin = function(){
+			alert("Logging in as guest!");
+			window.location.href="mart.html";
+		}
+
+	</script>
+	<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      getData();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      console.log('Please log into this app.');
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      console.log('Please log into Facebook.');
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '931208936921065',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.2' // use version 2.2
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  
+  function getData() {
+    FB.api('/me', function(response) {
+      var $username = response.name;
+      // Set username in session storage
+      sessionStorage.setItem("username" ,$username);
+      sessionStorage.setItem("loggedIn","1");
+      console.log('Successful login for: ' + $username);
+      prepareUI();
+      
+      //$("#status").text("Login successful!");
+    });
+  }
+
+  function prepareUI(){
+  	// Prepare UI for logged in user
+      $(".slide1-metro").css("display","none");
+
+    // Hide the mini login
+    $(".facebook-mini-login").css("visibility","hidden");
+    // Replace guest with username
+    if(sessionStorage['loggedIn']==1){
+    	$(".username-placeholder").text(sessionStorage['username']);
+    }
+  }
+
+    /*
+     * Using session storage to store login results.
+     * sessionStorage['loggedIn'] : 0 => Not Logged In
+     *                            : 1 => Logged In
+     *                            : 2 => App not authorised
+     */
+
+    function facebookLogin(){
+          FB.login(function(response){
+             if (response.status === 'connected') {
+                  getData();
+                  prepareUI();
+                  //$("#status").text("Login successful.");
+                  sessionStorage.setItem("loggedIn","1");
+             }else if (response.status === 'not_authorized') {
+                  $("#status").text("Please authorize our app to proceed");
+                  sessionStorage.setItem("loggedIn","2");
+            } else {
+                  $("#status").text("Please login to your facebook to continue shopping");
+                  sessionStorage.setItem("loggedIn","0");
+            }
+        });
+    }
+
+ 
+</script>
+
+</body>
+</html>
